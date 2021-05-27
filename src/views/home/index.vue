@@ -34,6 +34,7 @@
       </nav>
     </header>
     <div class="home-main">
+      <carousel :imgList="carouselList"></carousel>
       <div class="home-title">
         <p class="main-title">网站快速成型工具</p>
         <p class="sub-title">
@@ -94,10 +95,25 @@
 </template>
 <script>
 import { mapState, mapMutations } from "vuex";
+
+import Carousel from './component/carousel.vue';
 //import { WOW } from "wowjs";
 export default {
+  components:{
+    
+    Carousel
+  },
   data() {
-    return {};
+    return {
+      carouselList:[
+        {
+          img:'http://www.guodegang.org/files/deyunshe_new/tc_hp_slide/img/1/1.jpg'
+        },
+        {
+          img:'http://www.guodegang.org/files/deyunshe_new/tc_hp_slide/img/1/2.jpg'
+        }
+      ]
+    };
   },
   computed: {
     ...mapState({
