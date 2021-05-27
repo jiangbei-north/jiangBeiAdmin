@@ -1,0 +1,57 @@
+/* 全局样式表 */
+html,body{
+  padding: 0;
+  margin: 0;
+}
+body,p,dl,dd,ul,ol,li,div,h1,h2,h3,h4,h5,h6,form,input,table,tr,td{
+	margin:0;
+	padding:0;
+}
+ul {
+  list-style-type: disc;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  list-style:none;
+}
+.hand{
+  cursor: pointer;
+}
+.positionR{
+  position: relative;
+}
+.positionA{
+  position: absolute;
+}
+.f-r-c-c{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.f-c-b-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+.f-c-c-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.f-c-t-c{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.f-r-sb-c{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
