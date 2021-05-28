@@ -15,6 +15,9 @@ li {
   text-align: -webkit-match-parent;
   list-style:none;
 }
+a{
+  text-decoration:none;
+}
 .hand{
   cursor: pointer;
 }
@@ -29,6 +32,12 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.f-r-c-t{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
 }
 .f-c-b-c{
   display: flex;
@@ -48,10 +57,35 @@ li {
   justify-content: flex-start;
   align-items: center;
 }
+.f-c-t-l{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .f-r-sb-c{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+.f-r-sb-t{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.f-r-l-t{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.f-r-w-l-c{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
 }
 

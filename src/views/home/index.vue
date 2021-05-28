@@ -58,9 +58,9 @@
       <div class="card-box">
         <ul class="container f-r-sb-c">
           <li>
-            <div class="card-item f-c-t-c">
+            <div class="card-item f-c-t-c" @click="toVideo">
               <img src="@/assets/image/home/element.png" alt="" />
-              <p class="card-name">指南</p>
+              <p class="card-name">视频</p>
               <p class="card-subname">
                 了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。
               </p>
@@ -70,7 +70,7 @@
           <li>
             <div class="card-item f-c-t-c">
               <img src="@/assets/image/home/component.png" alt="" />
-              <p class="card-name">组件</p>
+              <p class="card-name">音频</p>
               <p class="card-subname">
                 使用组件Demo快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。
               </p>
@@ -89,7 +89,8 @@
           </li>
         </ul>
       </div>
-      <div style="height: 500px"></div>
+      <people></people>
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -97,11 +98,16 @@
 import { mapState, mapMutations } from "vuex";
 
 import Carousel from './component/carousel.vue';
+import People from './component/people';
+import Footer from '@/component/home/footer';
+
 //import { WOW } from "wowjs";
 export default {
   components:{
+    People,
+    Carousel,
+    Footer,
     
-    Carousel
   },
   data() {
     return {
@@ -135,6 +141,9 @@ export default {
         this.changeCollapse(true);
       }
     },
+    toVideo(){
+      this.$router.push({name:'Video'});
+    }
   },
 };
 </script>
