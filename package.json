@@ -11,6 +11,7 @@
     "animate.css": "^4.1.1",
     "core-js": "^3.6.5",
     "element-plus": "^1.0.2-beta.44",
+    "nprogress": "^0.2.0",
     "sass": "^1.26.2",
     "sass-loader": "^8.0.2",
     "vue": "^3.0.0",

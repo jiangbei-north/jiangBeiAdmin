@@ -1,6 +1,6 @@
 <template>
   <div id="video-header">
-    <el-page-header @back="goBack" title="返回" content="视频页面" style="margin-left:20px"> </el-page-header>
+    <el-page-header @back="goBack" title="返回" content="音频页面" style="margin-left:20px"> </el-page-header>
   </div>
 </template>
 <script>

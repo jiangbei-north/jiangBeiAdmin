@@ -68,7 +68,7 @@
             </div>
           </li>
           <li>
-            <div class="card-item f-c-t-c">
+            <div class="card-item f-c-t-c" @click="toAudio">
               <img src="@/assets/image/home/component.png" alt="" />
               <p class="card-name">音频</p>
               <p class="card-subname">
@@ -127,7 +127,9 @@ export default {
     }),
   },
   mounted() {
-    
+    this.$store.dispatch('user/changeRoles','2').then(() => {
+      console.log('changeRoles')
+    })
   },
   methods: {
     ...mapMutations("home", ["changeCollapse"]),
@@ -142,7 +144,10 @@ export default {
       }
     },
     toVideo(){
-      this.$router.push({name:'Video'});
+      this.$router.push({path:'/video'});
+    },
+    toAudio(){
+      this.$router.push({path:'/audio'});
     }
   },
 };
