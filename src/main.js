@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+//import myMessage from './component/mymessage/mymessage'
 import './permission'
 //引入完整的element
 import ElementPlus from 'element-plus';
@@ -16,5 +17,6 @@ const app = createApp(App)
 app.use(store)
 app.use(router)
 app.use(ElementPlus)
+//app.use(myMessage)
 app.mount('#app')
 //createApp(App).use(store).use(router).mount('#app')

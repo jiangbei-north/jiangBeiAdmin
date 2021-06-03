@@ -2,13 +2,28 @@
 export const OasyncRoutes = [
   {
     path:'/audio',
-    name:'Audio',
-    component:() => import(/* webpackChunkName: "about" */'@/views/audio/index.vue')
+    name:'audio',
   },
-  // {
-  //   path:'/video',
-  //   name:'Video',
-  //   component:() => import(/* webpackChunkName: "about" */'@/views/video/index.vue')
-  // },
+  {
+    path:'/audio/desc',
+    name:'audio-desc',
+  },
+  {
+    path:'/audio/list',
+    name:'audio-list',
+  },
+  
+  {
+    path:'/video',
+    name:'Video',  
+  },
+  {
+    path:'/video/desc',
+    name:'video-desc',
+  },
+  {
+    path:'/video/list',
+    name:'video-list',
+  },
   
 ]

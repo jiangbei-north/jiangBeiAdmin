@@ -31,11 +31,11 @@
         </div>
         <div class="author">
           <div class="author-title">演出时间</div>
-          <p>2005年10月1日</p>
+          <p class="content">2005年10月1日</p>
         </div>
         <div class="author">
           <div class="author-title">视频详情</div>
-          <p>这是详情</p>
+          <p class="content">这是详情</p>
         </div>
       </div>
     </div>
@@ -128,6 +128,9 @@ export default {
               border-radius: 50%;
             }
           }
+        }
+        .content{
+          padding: 10px;
         }
       }
     }

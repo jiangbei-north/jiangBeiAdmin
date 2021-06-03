@@ -10,23 +10,14 @@
         <div class="nav-item hand">处理中心</div>
         <div class="nav-item hand">订单</div>
         <div class="nav-item hand">
-          <el-dropdown>
+          <el-dropdown @command="handleCommand">
             <span class="el-dropdown-link">
-              下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+              {{name}}<i class="el-icon-arrow-down el-icon--right"></i>
             </span>
             <template #dropdown>
               <el-dropdown-menu>
-                <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
-                <el-dropdown-item icon="el-icon-circle-plus"
-                  >狮子头</el-dropdown-item
-                >
-                <el-dropdown-item icon="el-icon-circle-plus-outline"
-                  >螺蛳粉</el-dropdown-item
-                >
-                <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
-                <el-dropdown-item icon="el-icon-circle-check"
-                  >蚵仔煎</el-dropdown-item
-                >
+                <el-dropdown-item icon="el-icon-s-promotion" command="exit">退出登录</el-dropdown-item>
+                
               </el-dropdown-menu>
             </template>
           </el-dropdown>
@@ -124,6 +115,7 @@ export default {
   computed: {
     ...mapState({
       isCollapse: (state) => state.home.isCollapse,
+      name:(state) => state.user.name
     }),
   },
   mounted() {
@@ -148,6 +140,15 @@ export default {
     },
     toAudio(){
       this.$router.push({path:'/audio'});
+    },
+    handleCommand(command){
+      if(command == 'exit'){
+        this.$message('正在退出登录');
+        setTimeout(() => {
+          this.$router.replace('/login');
+          
+        },1500)
+      }
     }
   },
 };
@@ -191,8 +192,8 @@ export default {
           color: $font;
         }
         &:hover {
-          background-color: $info;
-          color: $primary !important;
+          background-color: $hoverBack;
+          color: $hoverFont;
         }
       }
     }

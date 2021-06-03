@@ -4,18 +4,18 @@
       <div class="left f-c-b-c">
         <div class="item f-c-c-c">
           <i class="el-icon-user-solid"></i>
-          <p>信息</p>
+          <p>音频</p>
         </div>
         <div class="item f-c-c-c">
           <i class="el-icon-star-on"></i>
-          <p>星星</p>
+          <p>音频</p>
         </div>
-        <div class="item f-c-c-c" @click="toSetting">
+        <div class="item f-c-c-c">
           <i class="el-icon-s-grid"></i>
-          <p>设置</p>
+          <p>音频</p>
         </div>
       </div>
-      <router-view to="/home/index"></router-view>
+      <router-view></router-view>
     </div>
    
   </div>
@@ -29,11 +29,7 @@ export default {
     return {};
   },
 
-  methods: {
-    toSetting(){
-      this.$router.push("/setting")
-    }
-  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
@@ -57,12 +53,10 @@ export default {
           font-size: 20px;
         }
         &:hover {
-          background-color: $hoverBack;
-          color: $hoverFont;
+          background-color: $info;
         }
       }
     }
   }
 }
 </style>
-

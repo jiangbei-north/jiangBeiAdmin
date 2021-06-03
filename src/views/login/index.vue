@@ -37,11 +37,12 @@ export default {
       },
       rules: {
         name: [
-          { required: true, message: "请输入活动名称", trigger: "blur" },
-          { min: 3, max: 5, message: "长度在 3 到 5 个字符", trigger: "blur" },
+          { required: true, message: "用户名不能为空", trigger: "blur" },
+          
         ],
         password:[
-          { required: true, message: "请输入活动名称", trigger: "blur" },
+          { required: true, message: "密码不能为空", trigger: "blur" },
+          { min: 3, max: 5, message: "长度在 3 到 5 个字符", trigger: "blur" },
         ]
       },
     };
@@ -55,7 +56,7 @@ export default {
         if (valid) {
           this.login(this.ruleForm.name);
           this.changeRoles(this.ruleForm.name);
-          this.$router.push({ name: "Home" });
+          this.$router.push({ path: "/home" });
         } else {
           console.log("error submit!!");
           return false;
@@ -83,7 +84,7 @@ export default {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.04);
     padding: 20px;
     right: 50px;
-    top: 100px;
+    top: 50px;
     .title {
       font-size: 25px;
       font-weight: 600;

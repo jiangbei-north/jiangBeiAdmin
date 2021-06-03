@@ -9,12 +9,6 @@ router.beforeEach(async (to, from, next) => {
   console.log(to, from)
   console.log('下一步', to.path)
   NProgress.start();
-
-
-   if (to.path === '/404') {
-    next();
-    NProgress.done();
-  } else {
     const hasRoles = store.getters.roles && store.getters.roles.length > 0;
     console.log('当前是否有权限',store.getters.roles)
     if (hasRoles) {
@@ -35,7 +29,7 @@ router.beforeEach(async (to, from, next) => {
       NProgress.done();
     }
 
-  }
+  
 
 
 })
