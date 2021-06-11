@@ -40,7 +40,7 @@ const actions = {
  * @returns {Boolean}
  */
  function hasPath(asyncRouterItem, userRouteItem) {
-	return asyncRouterItem.path === userRouteItem.path;
+	return asyncRouterItem.name === userRouteItem.name;
 }
 
 /**

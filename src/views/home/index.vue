@@ -122,6 +122,7 @@ export default {
     this.$store.dispatch('user/changeRoles','2').then(() => {
       console.log('changeRoles')
     })
+    this.test();
   },
   methods: {
     ...mapMutations("home", ["changeCollapse"]),
@@ -149,6 +150,25 @@ export default {
           
         },1500)
       }
+    },
+    test(){
+      // let list = [1,1,2,2,3,5,8];
+      //  const s = new Set(list);
+      //  for(let k of s.entries()){
+      //    console.log(k)
+      //  }
+      //  console.log(s,Array.from(s).length);
+      const s2 = new Set([
+        [1,'foo'],
+        ['bar',2]
+      ])
+      const m2 = new Map(s2)
+      m2.set(1,'aaa')
+      
+      for(let k of m2.entries()){
+        console.log('1',k)
+      }
+
     }
   },
 };

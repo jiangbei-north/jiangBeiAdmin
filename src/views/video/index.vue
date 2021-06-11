@@ -36,6 +36,7 @@
         <div class="author">
           <div class="author-title">视频详情</div>
           <p class="content">这是详情</p>
+          <el-button @click="toUs">跳转本页</el-button>
         </div>
       </div>
     </div>
@@ -62,11 +63,24 @@ export default {
         },
       ],
       see_btn:false,
-      videoPlay:false
+      videoPlay:false,
+      id:0,
     };
   },
-  mounted() {},
+  watch:{
+    id(n,o){
+      console.log('id改变',n,o)
+    }
+  },
+  mounted() {
+    let params = this.$route.params;
+    this.id = params.id;
+    console.log('参数',this.id)
+  },
   methods: {
+    toUs(){
+      this.$router.push({name:"video-desc",params:{id:3}})
+    }
    
   },
 };

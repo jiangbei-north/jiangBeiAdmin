@@ -1,7 +1,7 @@
 <template>
   <div id="home">
     <div class="home-content">
-      <div class="left f-c-b-c">
+      <!-- <div class="left f-c-b-c">
         <div class="item f-c-c-c">
           <i class="el-icon-user-solid"></i>
           <p>视频</p>
@@ -14,8 +14,11 @@
           <i class="el-icon-s-grid"></i>
           <p>视频</p>
         </div>
-      </div>
+      </div> -->
       <router-view></router-view>
+      <div class="right">
+
+      </div>
     </div>
    
   </div>
@@ -35,10 +38,14 @@ export default {
 <style lang="scss" scoped>
 @import "@/styles/common.scss";
 #home {
+  width: 100%;
   .home-content {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     height: 100vh;
+    width: 1000px;
+    margin: 0 auto;
     .left {
       height: inherit;
       width: 150px;
@@ -56,6 +63,11 @@ export default {
           background-color: $info;
         }
       }
+    }
+    .right{
+      width: 180px;
+      height: 100%;
+      background-color: aqua;
     }
   }
 }

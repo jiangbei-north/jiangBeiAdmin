@@ -15,10 +15,10 @@ export const OasyncRoutes = [
   
   {
     path:'/video',
-    name:'Video',  
+    name:'video',  
   },
   {
-    path:'/video/desc',
+    path:'/video/desc/:id',
     name:'video-desc',
   },
   {

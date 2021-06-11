@@ -13,7 +13,7 @@ const videoRouter = {
         component: () => import(/* webpackChunkName: "about" */'@/views/video/videoList.vue'),
       },
       {
-        path: '/video/desc',
+        path: '/video/desc/:id',
         name: 'video-desc',
         component: () => import(/* webpackChunkName: "about" */'@/views/video/index.vue'),
       },
