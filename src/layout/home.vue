@@ -6,7 +6,7 @@
           <i class="el-icon-user-solid"></i>
           <p>信息</p>
         </div>
-        <div class="item f-c-c-c">
+        <div class="item f-c-c-c" @click="toWindow">
           <i class="el-icon-star-on"></i>
           <p>星星</p>
         </div>
@@ -32,6 +32,9 @@ export default {
   methods: {
     toSetting(){
       this.$router.push("/setting")
+    },
+    toWindow(){
+      this.$router.push("/window")
     }
   },
 };

@@ -7,7 +7,7 @@
         @click="change"
       ></i>
       <nav class="nav-list">
-        <div class="nav-item hand">处理中心</div>
+        <div class="nav-item hand">处理中心（）</div>
         <div class="nav-item hand">订单</div>
         <div class="nav-item hand">
           <el-dropdown @command="handleCommand">
@@ -117,6 +117,11 @@ export default {
       isCollapse: (state) => state.home.isCollapse,
       name:(state) => state.user.name
     }),
+  },
+  watch:{
+    isCollapse(n){
+      console.log('监听',n)
+    }
   },
   mounted() {
     this.$store.dispatch('user/changeRoles','2').then(() => {

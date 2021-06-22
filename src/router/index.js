@@ -41,6 +41,11 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path:'/window',
+    name:'window',
+    component:() => import(/* webpackChunkName: "about" */'@/views/window/index.vue')
+  },
   
   {
     path: '/404',
